@@ -1,0 +1,183 @@
+*,*:before,*:after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.wrapper{
+
+}
+.container{
+    max-width: 1180px;
+    margin: 0px auto;
+    padding: 0px 10px;
+}
+
+.header{
+position: fixed;
+width: 100%;
+top: 0;
+left: 0;
+z-index: 50;
+}
+
+.header::before
+{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #5e5373;
+}
+.header__body{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+.header__logo{
+ flex: 0 0 60px;
+ border-radius: 50%;
+ overflow: hidden;
+}
+
+.header__logo img{
+    max-width: 100%;
+}
+.header__burger{
+    display: none;
+}
+.header__menu{}
+
+@media (max-width:767px){
+    .header__burger{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;   
+    }
+    .header__burger span{
+        position: absolute;
+        background-color: white;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+    }
+    .header__burger::before,
+    .header__burger::after{
+        content: '';
+        background-color: white;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+    }
+    .header__burger::before{
+        top: 0;
+    }
+    .header__burger::after{
+        bottom: 0;
+    }
+}
+.header__list{
+    display: flex;
+}
+
+.header__list li{
+    list-style: none;
+    margin: 0px 0px 0px 20px;
+}
+.header__link{
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.content{
+    padding: 100px 0px 0px 0px;
+}
+
+.content__text{
+    font-size: 18px;
+    line-height: 25px;
+}
+.content__text p{
+    margin: 0px 0px 20px 0px;
+}
+
+
+/*Html*/
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Космические аппараты</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" href = "favicon.ico" type = "image/x-icon">
+</head>
+<body>
+<div class="wrapper">
+<header class="header">
+	<div class="container">
+		<div class="header__body">
+			<a href="#" class="header__logo">
+				<img src="favicon.ico" alt="логотип">
+			</a>
+
+			<div class="header__burger">
+				<span></span>
+			</div>
+
+			<nav class="header__menu">
+				<ul class="header__list">
+					<li>
+						<a href="" class="header__link">Главная</a>
+					</li>
+					<li>
+						<a href="" class="header__link">Спутники</a>
+					</li>
+					<li>
+						<a href="" class="header__link">Летательные аппараты</a>
+					</li>
+					<li>
+						<a href="" class="header__link">Летательные аппараты</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+</div>
+<div class="content">
+	<div class='container'>
+		<div class="content__text">
+		<h1>Космические	аппараты</h1>
+		<p>
+			lorem
+		</p>	
+		</div>
+
+	</div>
+</div>
+
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
