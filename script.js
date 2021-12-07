@@ -7,6 +7,7 @@ function myFunction() { //Меню-бургер
     }
   }
 
+//Слайдер
 var btn_prev = document.querySelector('#slider .buttons .prev');
 var btn_next = document.querySelector('#slider .buttons .next');
 var images = document.querySelectorAll('#slider .photos img');
